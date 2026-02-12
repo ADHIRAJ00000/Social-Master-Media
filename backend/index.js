@@ -12,7 +12,7 @@ import { app, server } from "./socket/socket.js";
 import path from "path";
 import axios from 'axios';
 
-const url = `http://localhost:5000`;
+const url = process.env.CLIENT_URL || "http://localhost:5000";
 const interval = 30000;
 
 function reloadWebsite() {
